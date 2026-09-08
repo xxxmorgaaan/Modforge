@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сборки модов — МОД:ЛАБ</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<div class="wrap section">
+  <div class="section-head">
+    <h2>Сборки модов</h2>
+    <span class="sub">Несколько модов одной игры, собранных в один набор</span>
+  </div>
+
+  <div class="panel" style="margin-bottom:22px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px">
+    <p style="color:var(--text-muted); margin:0; font-size:13.5px; max-width:56ch">Сборка — это подборка из нескольких модов для одной игры: удобно делиться готовым набором «на всё сразу», без объяснений что с чем ставить.</p>
+    <a href="/bundle-upload.html" class="btn btn-ember btn-sm">Собрать сборку</a>
+  </div>
+
+  <div class="filter-bar">
+    <select id="filter-game"><option value="">Все игры</option></select>
+    <input type="search" id="filter-search" placeholder="Поиск по названию или автору…">
+    <select id="filter-sort">
+      <option value="newest">Сначала новые</option>
+      <option value="popular">По скачиваниям</option>
+      <option value="top_rated">По лайкам</option>
+      <option value="az">По алфавиту</option>
+    </select>
+  </div>
+
+  <div class="mod-grid" id="bundle-grid" style="margin-top:22px"></div>
+</div>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/bundles.js"></script>
+</body>
+</html>

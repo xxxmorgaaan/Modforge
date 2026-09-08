@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мод — МОД:ЛАБ</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<div class="wrap" id="mod-root">
+  <div class="mod-hero" id="mod-hero"><p style="color:var(--text-muted)">Загрузка…</p></div>
+</div>
+
+<div class="wrap" id="mod-details" style="display:none">
+  <div class="section" style="padding-top:0">
+    <div class="panel">
+      <h2 style="font-size:20px;margin-bottom:14px">Описание</h2>
+      <p id="mod-description" style="color:var(--text-muted); white-space:pre-wrap"></p>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0" id="gallery-section" style="display:none">
+    <div class="panel">
+      <h2 style="font-size:20px;margin-bottom:14px">Скриншоты</h2>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="panel">
+      <h2 style="font-size:20px;margin-bottom:14px">История версий</h2>
+      <div id="versions"></div>
+    </div>
+  </div>
+
+  <div class="section" id="related-section" style="padding-top:0; display:none">
+    <div class="panel">
+      <h2 style="font-size:20px;margin-bottom:14px">Похожие моды</h2>
+      <div class="mod-grid" id="related-grid"></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="panel">
+      <h2 style="font-size:20px;margin-bottom:14px">Комментарии</h2>
+      <form id="comment-form" style="margin-bottom:20px">
+        <div class="two-col">
+          <div class="form-row" style="margin-bottom:10px"><input type="text" id="comment-name" placeholder="Ваше имя (необязательно)" maxlength="60"></div>
+        </div>
+        <div class="form-row"><textarea id="comment-text" placeholder="Поделитесь впечатлением о моде…" maxlength="2000" required style="min-height:70px"></textarea></div>
+        <button class="btn btn-teal" type="submit">Отправить комментарий</button>
+      </form>
+      <div id="comments-list"></div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox"><span class="close-btn" id="lightbox-close">&times;</span><img id="lightbox-img" src=""></div>
+
+<div class="modal-backdrop" id="report-modal">
+  <div class="modal" id="report-modal-inner"></div>
+</div>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/mod.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сборка — МОД:ЛАБ</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<div class="wrap" id="bundle-root">
+  <div class="mod-hero" id="bundle-hero"><p style="color:var(--text-muted)">Загрузка…</p></div>
+</div>
+
+<div class="wrap" id="bundle-details" style="display:none">
+  <div class="section" style="padding-top:0">
+    <div class="panel">
+      <h2 style="font-size:20px;margin-bottom:14px">Описание</h2>
+      <p id="bundle-description" style="color:var(--text-muted); white-space:pre-wrap"></p>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="panel">
+      <h2 style="font-size:20px;margin-bottom:14px">Что входит в сборку</h2>
+      <div id="bundle-mods-list"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="report-modal">
+  <div class="modal" id="report-modal-inner"></div>
+</div>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/bundle.js"></script>
+</body>
+</html>

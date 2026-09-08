@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Собрать сборку — МОД:ЛАБ</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<div class="wrap section" style="max-width:760px">
+  <div class="section-head"><h2>Собрать сборку из модов</h2></div>
+
+  <div class="panel">
+    <p style="color:var(--text-muted); font-size:13.5px">Выберите игру — появится список опубликованных модов для неё. Отметьте минимум два, чтобы собрать набор. Как и с модами, регистрация не нужна — после публикации вы получите код управления сборкой.</p>
+  </div>
+
+  <form class="panel" id="bundle-form" enctype="multipart/form-data" style="margin-top:16px">
+    <div class="form-row">
+      <label>Игра *</label>
+      <select id="f-game" required></select>
+    </div>
+
+    <div class="form-row">
+      <label>Моды для сборки * <span id="selected-count" style="color:var(--ember-hot); font-weight:400"></span></label>
+      <div class="mod-pick-list" id="mod-pick-list">
+        <p style="color:var(--text-muted); padding:10px">Сначала выберите игру.</p>
+      </div>
+      <div class="hint">Нужно минимум 2 мода одной игры.</div>
+    </div>
+
+    <div class="form-row">
+      <label>Название сборки *</label>
+      <input type="text" id="f-title" required maxlength="120" placeholder="Например: Стартовый набор для выживания">
+    </div>
+
+    <div class="two-col">
+      <div class="form-row">
+        <label>Имя автора сборки</label>
+        <input type="text" id="f-author" maxlength="60">
+      </div>
+      <div class="form-row">
+        <label>Теги (через запятую)</label>
+        <input type="text" id="f-tags" placeholder="сложное, для новичков…">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>Описание *</label>
+      <textarea id="f-description" required maxlength="4000" placeholder="Зачем собраны именно эти моды, в каком порядке ставить, что они дают вместе…" style="min-height:130px"></textarea>
+    </div>
+
+    <div class="form-row">
+      <label>Обложка сборки</label>
+      <div class="file-drop" id="cover-drop">Нажмите, чтобы выбрать изображение обложки
+        <div class="file-list" id="cover-list"></div>
+      </div>
+      <input type="file" id="f-cover" accept="image/*" style="display:none">
+    </div>
+
+    <button type="submit" class="btn btn-ember btn-block" id="submit-btn">Опубликовать сборку</button>
+  </form>
+</div>
+
+<div class="modal-backdrop" id="token-modal">
+  <div class="modal">
+    <h3>Сборка опубликована!</h3>
+    <p style="color:var(--text-muted); font-size:14px">Сохраните этот код — без него вы не сможете редактировать или удалить сборку. Мы также сохранили его в этом браузере.</p>
+    <div class="token-box" id="token-value"></div>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-teal btn-block" id="copy-token">Скопировать код</button>
+      <a class="btn btn-outline btn-block" id="goto-bundle">Перейти к сборке</a>
+    </div>
+  </div>
+</div>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/bundle-upload.js"></script>
+</body>
+</html>

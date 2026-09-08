@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МОД:ЛАБ — моды к играм от сообщества</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Моды для игр<br><span class="accent">от сообщества и для сообщества</span></h1>
+      <p class="lede">Публикуйте моды, ведите версии и скриншоты, собирайте отклики игроков. Без лишней регистрации — просто выберите роль и приступайте.</p>
+      <div class="hero-actions">
+        <a href="/upload.html" class="btn btn-ember">Загрузить свой мод</a>
+        <a href="#catalog" class="btn btn-outline">Смотреть каталог</a>
+      </div>
+    </div>
+    <div class="stat-strip" id="stat-strip">
+      <div class="stat-cell"><div class="num" id="stat-mods">—</div><div class="label">модов</div></div>
+      <div class="stat-cell"><div class="num" id="stat-games">—</div><div class="label">игр</div></div>
+      <div class="stat-cell"><div class="num" id="stat-downloads">—</div><div class="label">скачиваний</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="featured-section" style="display:none">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Витрина</h2>
+      <span class="sub">Отобрано администрацией</span>
+    </div>
+    <div class="mod-grid" id="featured-grid"></div>
+  </div>
+</section>
+
+<section class="section" id="catalog">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Каталог модов</h2>
+      <span class="sub" id="result-count"></span>
+    </div>
+
+    <div class="filter-bar">
+      <select id="filter-game"><option value="">Все игры</option></select>
+      <input type="search" id="filter-search" placeholder="Поиск по названию, автору или описанию…">
+      <select id="filter-sort">
+        <option value="newest">Сначала новые</option>
+        <option value="updated">Недавно обновлённые</option>
+        <option value="popular">По скачиваниям</option>
+        <option value="top_rated">По лайкам</option>
+        <option value="az">По алфавиту</option>
+      </select>
+    </div>
+    <div class="tag-chips" id="tag-chips"></div>
+
+    <div class="mod-grid" id="mod-grid" style="margin-top:22px"></div>
+  </div>
+</section>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/js/app.js"></script>
+<script src="/js/home.js"></script>
+</body>
+</html>
